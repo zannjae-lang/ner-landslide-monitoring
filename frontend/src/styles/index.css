@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: #F4F1EA;
+  color: #20251F;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Precision scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E9E6DD;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4BFB2;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #806B52;
+}
+
+/* Operational Earth Panels & Cards */
+.earth-panel {
+  background-color: #FAF9F5;
+  border: 1px solid #D5D2C8;
+  border-radius: 6px;
+}
+
+.earth-card {
+  background-color: #FAF9F5;
+  border: 1px solid #D5D2C8;
+  border-radius: 6px;
+}
+
+.earth-card-secondary {
+  background-color: #E9E6DD;
+  border: 1px solid #D5D2C8;
+  border-radius: 6px;
+}
+
+/* Leaflet Natural Cartographic Map Theme */
+.leaflet-container {
+  background: #E9E6DD !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FAF9F5 !important;
+  color: #20251F !important;
+  border: 1px solid #D5D2C8 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px -2px rgba(32, 37, 31, 0.15) !important;
+}
+
+.leaflet-popup-tip {
+  background: #FAF9F5 !important;
+  border: 1px solid #D5D2C8 !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px !important;
+  line-height: 1.4 !important;
+}
+
+/* Clean Transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(1px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.12s ease-out forwards;
+}

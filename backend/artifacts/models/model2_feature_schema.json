@@ -1,0 +1,17 @@
+{
+    "model": "Model 2",
+    "version": "model2_v1.0_temporal_candidate",
+    "features": [
+        "Rainfall_1h",
+        "Rainfall_3h",
+        "Rainfall_6h",
+        "Rainfall_12h",
+        "Rainfall_24h",
+        "Rainfall_3day",
+        "Rainfall_7day",
+        "susceptibility_probability",
+        "soil_moisture_layer_1",
+        "soil_moisture_layer_2"
+    ],
+    "feature_count": 10
+}

@@ -1,0 +1,61 @@
+{
+    "project": "AI-Based Early Warning and Landslide Risk Monitoring System in NER",
+    "created_at_utc": "2026-09-19T06:46:18.815818+00:00",
+    "engine_version": "2.0",
+    "models": {
+        "model1": {
+            "name": "Landslide Susceptibility Model",
+            "version": "model1_v1.0",
+            "algorithm": "XGBoost",
+            "task": "Static susceptibility prediction",
+            "artifact": "model1_landslide_susceptibility.joblib",
+            "sha256": "e18ae888efc217c6548d57e1eb09b86327615c8a4374fad73093c2abdc8726c8",
+            "threshold": 0.39,
+            "features": [
+                "elevation",
+                "slope",
+                "curvature",
+                "tpi",
+                "tri",
+                "aspect_sin",
+                "aspect_cos",
+                "ndvi_p90",
+                "ndvi_p50",
+                "ndvi_p10",
+                "distance_to_road_m",
+                "distance_to_drainage_m",
+                "lulc_type"
+            ]
+        },
+        "model2": {
+            "name": "Dynamic Landslide Early Warning Model",
+            "version": "model2_v1.0_temporal_candidate",
+            "algorithm": "XGBoost",
+            "task": "Dynamic warning candidate prediction",
+            "artifact": "model2_landslide_early_warning.joblib",
+            "sha256": "9431de361c4e644fb243a61474e146ea3bd8c9d3f1dbcefeec1f17b85609ba7b",
+            "threshold": 0.1,
+            "features": [
+                "Rainfall_1h",
+                "Rainfall_3h",
+                "Rainfall_6h",
+                "Rainfall_12h",
+                "Rainfall_24h",
+                "Rainfall_3day",
+                "Rainfall_7day",
+                "susceptibility_probability",
+                "soil_moisture_layer_1",
+                "soil_moisture_layer_2"
+            ],
+            "sar_features": false,
+            "status": "Research candidate",
+            "operational_validation": false
+        }
+    },
+    "risk_engine": {
+        "version": "2.0",
+        "max_data_age_hours": 6,
+        "warning_status": "Prototype only",
+        "calibrated_probability": false
+    }
+}

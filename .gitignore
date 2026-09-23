@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment and Credentials (CRITICAL SECURITY)
+.env
+backend/.env
+credentials/
+backend/credentials/
+*.json.key
+*service_account*.json
+*credentials*.json
+
+# Runtime and local data
+logs/
+backend/data/raw/
+backend/data/processed/
+backend/data/cache/
+backend/ner_landslide.db
+
+# Frontend
+node_modules/
+frontend/dist/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
